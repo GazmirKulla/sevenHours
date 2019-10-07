@@ -9,7 +9,7 @@ import {
 
 class User extends Component {
   componentDidMount() {
-    !this.props.userList && this.props.getUserList()
+    !this.props.user.userList && this.props.getUserList()
   }
 
   render() {
@@ -72,7 +72,7 @@ class User extends Component {
                   <input name="company" type="text" value={companyName} placeholder="Company Name" onChange={(e) => handleField({ company: { name: e.target.value } })} />
                 </div>
                 <div className="col-md-12">
-                   <button class="default-button" onClick={()=> history.push('/')}>All Users</button>
+                   <button className="default-button" onClick={()=> history.push('/')}>All Users</button>
                 </div>
               </div>
             </div>

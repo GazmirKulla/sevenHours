@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { history } from 'util/history'
+
 import {
 getUserList
 } from "Redux/actions";
-//import Loading from 'components/Loading';
 
 class ConnectedLaunchGame extends Component {
   componentDidMount() {
-    !this.props.userList && this.props.getUserList()
+    !this.props.user.userList && this.props.getUserList()
   }
   render() {
     const {

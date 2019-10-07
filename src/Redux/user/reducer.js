@@ -1,9 +1,9 @@
 import update from 'immutability-helper';
+import { REHYDRATE } from 'redux-persist';
 import {
 	USER,
 	USER_LIST_GET_SUCCESS,
-	USER_UPDATE,
-	REHYDRATE
+	USER_UPDATE
 } from 'constants/actionTypes';
 
 const INIT_STATE = {
