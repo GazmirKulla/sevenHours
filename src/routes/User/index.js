@@ -9,7 +9,7 @@ import {
 
 class User extends Component {
   componentDidMount() {
-    !this.props.user.userList && this.props.getUserList()
+    this.props.user.userList.length === 0 && this.props.getUserList()
   }
 
   render() {

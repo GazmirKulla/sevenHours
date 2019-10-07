@@ -8,7 +8,7 @@ getUserList
 
 class ConnectedLaunchGame extends Component {
   componentDidMount() {
-    !this.props.user.userList && this.props.getUserList()
+    this.props.user.userList.length === 0 && this.props.getUserList()
   }
   render() {
     const {
@@ -44,7 +44,7 @@ class ConnectedLaunchGame extends Component {
                         <div className="phone">{user.phone}</div>
                         <a href={`http://${user.website}`} target="blank" className="website">{user.website}</a>
                         <div className="company">{user.company.name}</div>
-                        <button class="default-button" onClick={()=> history.push(`user/${index}`)}>Edit User</button>
+                        <button className="default-button" onClick={()=> history.push(`user/${index}`)}>Edit User</button>
                       </div>
                     </div>
                   </div>
